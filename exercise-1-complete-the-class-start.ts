@@ -7,9 +7,9 @@
   // Hint: Look at the type of values being passed when `new Currency()`
   // is called below.
 
-  readonly name: string;
-  readonly code: string;
-  readonly symbol: string;
+  private name: string;
+  private code: string;
+  private symbol: string;
 
   // Add types to the constructor parameters.
 
@@ -28,7 +28,7 @@
   // Add a return type for this method
   // Hint: Look at the inferred return type.
 
-  describe(): string {
+  public describe(): void {
       // Replace the `null` values below with the appropriate field values.
       // Hint: Access field values with: this.fieldName
 
@@ -36,7 +36,7 @@
       description += `has the code ${this.code} `;
       description += `and uses the symbol ${this.symbol}.`;
 
-      return description;
+      console.log(description);
   }
 }
 
@@ -45,16 +45,14 @@
 const currencyNaira = new Currency("Naira", "NGN", "₦");
 console.log(currencyNaira);
 // Call the `describe()` method on the `currencyNaira` object.
-const describeNaira = currencyNaira.describe();
-console.log(describeNaira);
+currencyNaira.describe();
 
 // ----
 
 const currencyUsDollar = new Currency("United States dollar", "USD", "$");
 console.log(currencyUsDollar);
 // Call the `describe()` method on the `currencyUsDollar` object.
-const describeUsDollar = currencyUsDollar.describe();
-console.log(describeUsDollar);
+currencyUsDollar.describe();
 
 // ----
 
